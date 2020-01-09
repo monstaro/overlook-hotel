@@ -4,3 +4,12 @@ $primary-background: pink;
 body {
   background-color: $primary-background;
 }
+
+.login {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-text-boxes {
+  width: 20%;
+}
