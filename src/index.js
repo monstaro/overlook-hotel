@@ -47,9 +47,7 @@ getBookings()
 const checkForUsernamePassword = () => {
   if (!$('.username').val()) {
     $('.username-error').addClass('error-load')
-
     $('.username-error').removeClass('hidden')
-
   }
   if (!$('.password').val()) {
     $('.password-error').removeClass('hidden')
@@ -63,8 +61,9 @@ const checkForUsernamePassword = () => {
 
 
 const loginUser = () => {
+  console.log('login test')
   if ($('.username').val() === 'manager' && $('.password').val() === 'overlook2019') {
-    window.location = './src/manager.html'
+    window.location = './manager-page.html'
   }
 }
 
