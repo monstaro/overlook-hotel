@@ -1,5 +1,8 @@
-class Users {
+class User {
   constructor () {
-    this.id = id
+    
+
   }
 }
+
+export default User;
