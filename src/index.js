@@ -1,9 +1,18 @@
 
 import $ from 'jquery';
 import './css/base.scss';
+import Bookings from './classes/bookings.js'
+import Manager from './classes/manager.js'
+import Room from './classes/room.js'
+import Users from './classes/users.js'
 
 // An example of how you tell webpack to use an image (also need to link to it in the index.html)
 import './images/turing-logo.png'
+
+
+
+
+//API calls
 
 const getUsers = () => {
   fetch("https://fe-apps.herokuapp.com/api/v1/overlook/1904/users/users")
@@ -11,7 +20,6 @@ const getUsers = () => {
     .then(apiData => console.log(apiData))
     .catch(error => console.log(error))
 }
-
 getUsers()
 
 
@@ -21,7 +29,6 @@ const getRooms = () => {
     .then(apiData => console.log(apiData))
     .catch(error => console.log(error))
 }
-
 getRooms()
 
 const getBookings = () => {
@@ -30,15 +37,19 @@ const getBookings = () => {
     .then(apiData => console.log(apiData))
     .catch(error => console.log(error))
 }
-
-
-
 getBookings()
 
+
+
+
+
+
 const checkForUsernamePassword = () => {
-  let noError = false;
   if (!$('.username').val()) {
+    $('.username-error').addClass('error-load')
+
     $('.username-error').removeClass('hidden')
+
   }
   if (!$('.password').val()) {
     $('.password-error').removeClass('hidden')
@@ -46,16 +57,15 @@ const checkForUsernamePassword = () => {
   if ($('.username').val() && $('.password').val()) {
     $('.username-error').addClass('hidden')
     $('.password-error').addClass('hidden')
-    noError = true;
-  }
-  if (noError) {
     loginUser()
   }
 }
 
 
 const loginUser = () => {
-  console.log('howdy')
+  if ($('.username').val() === 'manager' && $('.password').val() === 'overlook2019') {
+    window.location = './src/manager.html'
+  }
 }
 
 
