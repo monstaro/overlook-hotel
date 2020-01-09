@@ -6,10 +6,13 @@
   <body>
     <h1>Login</h1>
     <form class="login">
-      <label for="loginUsername">Enter UserId</label>
-      <input type="text" class="login-text-boxes"></input>
+      <label for="login-username">Enter UserId</label>
+      <input type="text" class="login-text-boxes username"></input>
+      <p class="username-error hidden">Please enter a username in the box above</p>
       <label for="loginPassword">Enter Password</label>
-      <input type="text" class="login-text-boxes"></input>
+      <input type="password" class="login-text-boxes password"></input>
+      <p class="password-error hidden">Please enter a password in the box above</p>
+      <input type="button" class="login-button" value="Login"> </input>
     </form>
 
     <!-- Do not include the index.js or main.bundle.js file here - it is done automatically by the webpack server -->

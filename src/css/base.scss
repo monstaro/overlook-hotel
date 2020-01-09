@@ -13,3 +13,16 @@ body {
 .login-text-boxes {
   width: 20%;
 }
+
+.hidden {
+  visibility: hidden;
+}
+
+.password-error, .username-error {
+  color: red;
+}
+
+.login-button {
+  width: 21%;
+  margin-top: 10px;
+}

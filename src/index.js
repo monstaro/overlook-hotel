@@ -34,3 +34,31 @@ const getBookings = () => {
 
 
 getBookings()
+
+const checkForUsernamePassword = () => {
+  let noError = false;
+  if (!$('.username').val()) {
+    $('.username-error').removeClass('hidden')
+  }
+  if (!$('.password').val()) {
+    $('.password-error').removeClass('hidden')
+  }
+  if ($('.username').val() && $('.password').val()) {
+    $('.username-error').addClass('hidden')
+    $('.password-error').addClass('hidden')
+    noError = true;
+  }
+  if (noError) {
+    loginUser()
+  }
+}
+
+
+const loginUser = () => {
+  console.log('howdy')
+}
+
+
+//Event Listeners
+
+$('.login-button').click(checkForUsernamePassword)
