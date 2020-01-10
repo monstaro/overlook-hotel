@@ -11,16 +11,17 @@ import './images/turing-logo.png'
 
 
 
-
 //API calls
 
 const getUsers = () => {
   fetch("https://fe-apps.herokuapp.com/api/v1/overlook/1904/users/users")
     .then(response => response.json())
     .then(apiData => console.log(apiData))
+    .then(apiData => allUserData.push(apiData))
     .catch(error => console.log(error))
 }
 getUsers()
+
 
 
 const getRooms = () => {
@@ -61,9 +62,11 @@ const checkForUsernamePassword = () => {
 
 
 const loginUser = () => {
-  console.log('login test')
   if ($('.username').val() === 'manager' && $('.password').val() === 'overlook2019') {
-    window.location = './manager-page.html'
+    window.location = './manager.html'
+  }
+  if ($('.username').val() === 'guest50' && $('.password').val() === 'overlook2019') {
+    window.location = './guest.html'
   }
 }
 
