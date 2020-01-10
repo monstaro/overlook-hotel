@@ -1,8 +1,37 @@
 /* This is an example of using Sass, otherwise plain CSS works too*/
-$primary-background: pink;
+$primary-background: rgb(98, 105, 245);
+$primary-font: 'Gayathri', sans-serif;
 
 body {
   background-color: $primary-background;
+  font-family: $primary-font;
+  margin: 0;
+}
+
+// .main-container {
+//   display: flex;
+// }
+
+header {
+  display: inline-flex;
+  // background-image: url('../images/floral-bg.png');
+  background-size: cover;
+  // margin: auto;
+  margin: 50px 0 0 50px;
+  width: 100%;
+}
+
+.header-title {
+  color: white;
+  font-size: 3em;
+}
+
+.login-area {
+  border: 1px solid white;
+  display: flex;
+  padding: 20px;
+  margin: auto;
+  width: fit-content;
 }
 
 .login {
@@ -11,7 +40,8 @@ body {
 }
 
 .login-text-boxes {
-  width: 20%;
+  padding: 5px 10px 5px 10px;
+  font-size: 1.5em;
 }
 
 .hidden {
@@ -19,10 +49,19 @@ body {
 }
 
 .password-error, .username-error {
+  background: white;
   color: red;
+  width: fit-content;
 }
 
+
+
 .login-button {
-  width: 21%;
+  background: $primary-background;
+  font-family: $primary-font;
+  border: 3px solid white;
   margin-top: 10px;
+  padding-top: 10px;
+  height: 50px;
+  font-size: 1.5em;
 }
